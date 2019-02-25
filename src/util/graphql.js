@@ -1,6 +1,14 @@
-import identity from "lodash/identity"
+import get from 'lodash/get';
+import identity from 'lodash/identity';
+
+const hoistChildImageSharp = node => ({
+  ...node,
+  image: get(node, 'image.childImageSharp'),
+});
 
 const toNodes = (data, mapNode = identity) =>
-  data.edges.map(e => e.node).map(mapNode)
+  data.edges.map(e => e.node).map(mapNode);
 
-export { toNodes }
+const toNodesWithImage = data => toNodes(data, hoistChildImageSharp);
+
+export { toNodes, toNodesWithImage };

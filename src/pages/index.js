@@ -1,23 +1,23 @@
 import React from 'react';
 import { mapProps } from 'recompose';
 import { graphql } from 'gatsby';
-import { toNodes } from '../util/graphql';
+import { toNodesWithImage } from '../util/graphql';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import ClientList from '../components/client-list';
+import Clients from '../components/clients';
 
 function IndexPage({ clients }) {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <ClientList clients={clients} />
+      <Clients clients={clients} />
     </Layout>
   );
 }
 
 function mapPropsToProps({ data }) {
   return {
-    clients: toNodes(data.clients),
+    clients: toNodesWithImage(data.clients),
   };
 }
 export default mapProps(mapPropsToProps)(IndexPage);
@@ -30,8 +30,8 @@ export const pageQuery = graphql`
           id
           image {
             childImageSharp {
-              sizes {
-                ...GatsbyImageSharpSizes_withWebp_noBase64
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }

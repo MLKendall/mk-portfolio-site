@@ -11,7 +11,7 @@
   },
   {
     "id": "red-brace",
-    "image": "img/clients/redbrace-logo.png",
+    "image": "img/clients/red-brace-logo.png",
     "name": "Red Brace"
   },
   {
@@ -26,7 +26,7 @@
   },
   {
     "id": "replayfx",
-    "image": "img/clients/replay-logo.png",
+    "image": "img/clients/replayfx-logo.png",
     "name": "ReplayFX"
   }
 ]
