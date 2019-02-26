@@ -8,42 +8,31 @@ import styled from 'styled-components';
 const H2 = styled.h2`
   color: #2c3e50;
   display: inline-block;
-  font-weight: 700;
   font-family: 'Montserrat';
   font-size: 2.25rem;
+  font-weight: 700;
   line-height: 2rem;
   text-transform: uppercase;
   text-align: center;
 
   :after {
-    content: '';
-    display: block;
-    width: 15rem;
-    padding: 0;
-    text-align: center;
     border: none;
     border-color: #2c3e50;
     border-top: solid 0.25rem;
+    content: '';
+    display: block;
     margin: 0.5em 0 0;
+    padding: 0;
+    text-align: center;
+    width: 15rem;
   }
 `;
 
-// const SectionHeaderHR = styled.hr`
-//   max-width: 15rem;
-//   padding: 0;
-//   text-align: center;
-//   border: none;
-//   border-color: #2c3e50;
-//   border-top: solid 0.25rem;
-//   margin: 1.5em auto 1.875em;
-// `;
-
 function SectionHeader({ header }) {
   return (
-    <React.Fragment>
+    <Fragment>
       <H2>{header}</H2>
-      {/* <SectionHeaderHR /> */}
-    </React.Fragment>
+    </Fragment>
   );
 }
 

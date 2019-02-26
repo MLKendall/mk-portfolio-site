@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import { mediaQuery } from '../util/style';
 import SectionHeader from './section-header';
 
 const ClientSection = styled.section`
@@ -8,9 +9,23 @@ const ClientSection = styled.section`
 `;
 
 const ClientList = styled.div`
-  display: flex;
-  justify-content: space-around;
   align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`;
+
+const ClientLogo = styled(Img)`
+  flex-basis: 40%;
+  margin: 1em auto;
+
+  ${mediaQuery.medium`
+    flex-basis: 28%;
+  `};
+
+  ${mediaQuery.large`
+    flex-basis: 12%;
+  `};
 `;
 
 function Clients({ clients }) {
@@ -19,7 +34,11 @@ function Clients({ clients }) {
       <SectionHeader header="Clients" />
       <ClientList>
         {clients.map(client => (
-          <Img fixed={client.image.fixed} key={client.id} alt={client.name} />
+          <ClientLogo
+            fluid={client.image.fluid}
+            key={client.id}
+            alt={client.name}
+          />
         ))}
       </ClientList>
     </ClientSection>
