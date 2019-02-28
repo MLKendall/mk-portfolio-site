@@ -1,0 +1,32 @@
+[
+  {
+    "id": "aep",
+    "image": "img/clients/aep-logo.png",
+    "name": "American Electric Power"
+  },
+  {
+    "id": "hmhs",
+    "image": "img/clients/hmhs-logo.png",
+    "name": "Highmark Health System"
+  },
+  {
+    "id": "red-brace",
+    "image": "img/clients/red-brace-logo.png",
+    "name": "Red Brace"
+  },
+  {
+    "id": "st-marys-college-md",
+    "image": "img/clients/stmarys-logo.png",
+    "name": "St.Mary's College of Maryland"
+  },
+  {
+    "id": "work-hard",
+    "image": "img/clients/work-hard-logo.png",
+    "name": "Work Hard"
+  },
+  {
+    "id": "replayfx",
+    "image": "img/clients/replayfx-logo.png",
+    "name": "ReplayFX"
+  }
+]
