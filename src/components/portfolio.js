@@ -11,15 +11,16 @@ const PortfolioSection = styled.section`
 
 const PortfolioList = styled.div`
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
-const ClientLogo = styled(Img)`
+const PortfolioImage = styled(Img)`
   flex-basis: 100%;
   margin: 1em auto;
 
   ${mediaQuery.medium`
-    flex-basis: 40%;
+    flex-basis: 45%;
   `};
 
   ${mediaQuery.large`
@@ -33,7 +34,11 @@ function Portfolio({ portfolioItems }) {
       <SectionHeader header="Portfolio" />
       <PortfolioList>
         {portfolioItems.map(portfolioItem => (
-          <span>{portfolioItem.name}</span>
+          <PortfolioImage
+            fluid={portfolioItem.image.fluid}
+            key={portfolioItem.id}
+            alt={portfolioItem.name}
+          />
         ))}
       </PortfolioList>
     </PortfolioSection>
