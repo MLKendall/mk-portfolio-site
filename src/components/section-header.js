@@ -8,7 +8,6 @@ import styled from 'styled-components';
 const H2 = styled.h2`
   color: #2c3e50;
   display: inline-block;
-  font-family: 'Montserrat';
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 2rem;
