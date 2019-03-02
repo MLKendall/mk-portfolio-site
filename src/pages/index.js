@@ -7,7 +7,7 @@ import {
   faGithub,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
-import { toNodes, toNodesWithImage } from '../util/graphql';
+import { toNodesWithImage } from '../util/graphql';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Clients from '../components/clients';
