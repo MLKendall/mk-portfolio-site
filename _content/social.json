@@ -1,0 +1,17 @@
+[
+  {
+    "id": "code-pen",
+    "icon": "codepen",
+    "alt": "CodePen"
+  },
+  {
+    "id": "git-hub",
+    "icon": "github",
+    "alt": "GitHub"
+  },
+  {
+    "id": "linked-in",
+    "icon": "linkedin",
+    "alt": "LinkedIn"
+  }
+]
