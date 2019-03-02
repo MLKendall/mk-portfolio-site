@@ -1,6 +1,12 @@
 import React from 'react';
 import { mapProps } from 'recompose';
 import { graphql } from 'gatsby';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faCodepen,
+  faGithub,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
 import { toNodes, toNodesWithImage } from '../util/graphql';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -8,6 +14,8 @@ import Clients from '../components/clients';
 import Portfolio from '../components/portfolio';
 
 function IndexPage({ clients, portfolioItems }) {
+  library.add(faCodepen, faGithub, faLinkedin);
+
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
+import Footer from './footer';
 import './layout.css';
 
 const Layout = ({ children }) => (
@@ -12,6 +13,15 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+          }
+        }
+        socialIcons: allSocialJson {
+          edges {
+            node {
+              id
+              icon
+              alt
+            }
           }
         }
       }
@@ -28,10 +38,11 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()} {data.site.siteMetadata.title}
-          </footer>
         </div>
+        <Footer
+          socialIcons={data.socialIcons.edges}
+          siteTitle={data.site.siteMetadata.title}
+        />
       </>
     )}
   />
