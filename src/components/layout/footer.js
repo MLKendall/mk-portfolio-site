@@ -33,6 +33,7 @@ const ContactInfoBlock = styled.div`
 const ContactInfoBlockHeader = styled.h3`
   font-size: 1.5rem;
   text-transform: uppercase;
+  margin-bottom: 0.75em;
 `;
 
 const Social = styled.div`
@@ -75,7 +76,7 @@ const Footer = ({ siteTitle, socialIcons }) => (
         <ContactInfoBlockHeader>Social</ContactInfoBlockHeader>
         <Social>
           {socialIcons.map(social => (
-            <SocialLink aria-label={social.node.alt}>
+            <SocialLink aria-label={social.node.alt} key={social.node.id}>
               <FontAwesomeIcon icon={['fab', `${social.node.icon}`]} />
             </SocialLink>
           ))}

@@ -8,14 +8,15 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 import { toNodesWithImage } from '../util/graphql';
-import { Clients, Layout, Portfolio, SEO } from '../components';
+import { Clients, Hero, Layout, Portfolio, SEO } from '../components';
 
-function IndexPage({ clients, portfolioItems }) {
+function IndexPage({ clients, heroContent, portfolioItems }) {
   library.add(faCodepen, faGithub, faLinkedin);
 
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <Hero content={heroContent} />
       <Portfolio portfolioItems={portfolioItems} sectionTitle="Portfolio" />
       <Clients clients={clients} sectionTitle="Clients" />
     </Layout>
@@ -26,6 +27,7 @@ function mapPropsToProps({ data }) {
   return {
     clients: toNodesWithImage(data.clients),
     portfolioItems: toNodesWithImage(data.portfolioItems),
+    heroContent: toNodesWithImage(data.heroContent),
   };
 }
 export default mapProps(mapPropsToProps)(IndexPage);
@@ -59,6 +61,21 @@ export const pageQuery = graphql`
             }
           }
           name
+        }
+      }
+    }
+    heroContent: allSiteInformationJson {
+      edges {
+        node {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 500) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+              }
+            }
+          }
+          tagline
+          title
         }
       }
     }

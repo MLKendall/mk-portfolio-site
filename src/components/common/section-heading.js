@@ -11,6 +11,7 @@ const H2 = styled.h2`
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 2rem;
+  margin: 0.75em;
   text-transform: uppercase;
   text-align: center;
 
