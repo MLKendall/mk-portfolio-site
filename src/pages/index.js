@@ -19,8 +19,8 @@ function IndexPage({ clients, portfolioItems }) {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <Portfolio portfolioItems={portfolioItems} />
-      <Clients clients={clients} />
+      {/* <Portfolio portfolioItems={portfolioItems} /> */}
+      <Clients clients={clients} sectionTitle="Clients" />
     </Layout>
   );
 }

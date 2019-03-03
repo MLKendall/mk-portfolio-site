@@ -2,11 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { mediaQuery } from '../util/style';
-import SectionHeader from './section-header';
-
-const ClientSection = styled.section`
-  text-align: center;
-`;
+import Section from './section';
 
 const ClientList = styled.div`
   align-items: center;
@@ -28,10 +24,9 @@ const ClientLogo = styled(Img)`
   `};
 `;
 
-function Clients({ clients }) {
+function Clients({ clients, sectionTitle }) {
   return (
-    <ClientSection>
-      <SectionHeader header="Clients" />
+    <Section sectionTitle={sectionTitle}>
       <ClientList>
         {clients.map(client => (
           <ClientLogo
@@ -41,7 +36,7 @@ function Clients({ clients }) {
           />
         ))}
       </ClientList>
-    </ClientSection>
+    </Section>
   );
 }
 

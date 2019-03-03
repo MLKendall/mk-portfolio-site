@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 //This should take in a color to make it easy to change
@@ -27,12 +27,8 @@ const H2 = styled.h2`
   }
 `;
 
-function SectionHeader({ header }) {
-  return (
-    <Fragment>
-      <H2>{header}</H2>
-    </Fragment>
-  );
+function SectionHeading({ heading }) {
+  return <H2>{heading}</H2>;
 }
 
-export default SectionHeader;
+export default SectionHeading;
