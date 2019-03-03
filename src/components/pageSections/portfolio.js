@@ -19,7 +19,7 @@ const PortfolioImage = styled(Img)`
   `};
 
   ${mediaQuery.large`
-    flex-basis: 20%;
+    flex-basis: 22%;
   `};
 `;
 

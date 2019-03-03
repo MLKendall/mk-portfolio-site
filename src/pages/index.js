@@ -8,7 +8,7 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 import { toNodesWithImage } from '../util/graphql';
-import { Clients, Layout, Portfolio, SEO } from '../components';
+import { Clients, Hero, Layout, Portfolio, SEO } from '../components';
 
 function IndexPage({ clients, portfolioItems }) {
   library.add(faCodepen, faGithub, faLinkedin);
@@ -16,6 +16,7 @@ function IndexPage({ clients, portfolioItems }) {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <Hero />
       <Portfolio portfolioItems={portfolioItems} sectionTitle="Portfolio" />
       <Clients clients={clients} sectionTitle="Clients" />
     </Layout>
