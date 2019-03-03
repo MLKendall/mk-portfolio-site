@@ -2,12 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { mediaQuery } from '../util/style';
-import SectionHeader from './section-header';
-
-const PortfolioSection = styled.section`
-  text-align: center;
-  margin-bottom: 6em;
-`;
+import Section from './section';
 
 const PortfolioList = styled.div`
   display: flex;
@@ -28,10 +23,9 @@ const PortfolioImage = styled(Img)`
   `};
 `;
 
-function Portfolio({ portfolioItems }) {
+function Portfolio({ portfolioItems, sectionTitle }) {
   return (
-    <PortfolioSection>
-      <SectionHeader header="Portfolio" />
+    <Section sectionTitle={sectionTitle}>
       <PortfolioList>
         {portfolioItems.map(portfolioItem => (
           <PortfolioImage
@@ -41,7 +35,7 @@ function Portfolio({ portfolioItems }) {
           />
         ))}
       </PortfolioList>
-    </PortfolioSection>
+    </Section>
   );
 }
 

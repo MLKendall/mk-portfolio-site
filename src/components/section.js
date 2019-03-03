@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SectionHeading from './section-heading';
 
 const SectionWrapper = styled.section`
-  margin-bottom: 2.45em;
+  margin-bottom: 6em;
   text-align: center;
 `;
 
