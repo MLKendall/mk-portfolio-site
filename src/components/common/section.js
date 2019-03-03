@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { mediaQuery } from '../../util/style';
+
 import SectionHeading from './section-heading';
 
 const SectionWrapper = styled.section`
