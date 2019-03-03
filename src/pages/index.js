@@ -8,10 +8,7 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 import { toNodesWithImage } from '../util/graphql';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import Clients from '../components/clients';
-import Portfolio from '../components/portfolio';
+import { Clients, Layout, Portfolio, SEO } from '../components';
 
 function IndexPage({ clients, portfolioItems }) {
   library.add(faCodepen, faGithub, faLinkedin);

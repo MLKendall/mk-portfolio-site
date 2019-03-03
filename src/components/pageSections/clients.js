@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { mediaQuery } from '../util/style';
-import Section from './section';
+import { mediaQuery } from '../../util/style';
+import { Section } from '../../components';
 
 const ClientList = styled.div`
   align-items: center;

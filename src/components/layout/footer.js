@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { mediaQuery } from '../util/style';
+import { mediaQuery } from '../../util/style';
 
 const FooterWrapper = styled.footer`
   background-color: #2c3e50;
