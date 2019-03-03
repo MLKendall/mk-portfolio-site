@@ -3,8 +3,12 @@ import styled from 'styled-components';
 import SectionHeading from './section-heading';
 
 const SectionWrapper = styled.section`
-  margin-bottom: 6em;
+  margin-bottom: 3em;
   text-align: center;
+
+  ${mediaQuery.medium`
+    margin-bottom: 6em;
+  `};
 `;
 
 const SectionContentWrapper = styled.div`

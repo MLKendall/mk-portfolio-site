@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Img from 'gatsby-image';
 import { mediaQuery } from '../../util/style';
 
 const HeroSection = styled.section`
@@ -8,7 +8,11 @@ const HeroSection = styled.section`
   display: flex;
   justify-content: center;
   margin-bottom: 5rem;
-  padding: 6rem 0;
+  padding: 3rem 0;
+
+  ${mediaQuery.medium`
+    padding: 6rem 0;
+`};
 `;
 
 const HeroSectionWrapper = styled.div`
@@ -25,12 +29,15 @@ const HeroSectionWrapper = styled.div`
 `;
 
 const HeroImageWrapper = styled.div`
+  width: 100%;
+  margin-bottom: 1.45rem;
+
   ${mediaQuery.medium`
-    flex: 2;
+    flex: 5;
   `};
 `;
 
-const HeroImage = styled.img`
+const HeroImage = styled(Img)`
   max-width: 100%;
 `;
 
@@ -41,7 +48,7 @@ const HeroContent = styled.div`
   text-align: center;
 
   ${mediaQuery.medium`
-    flex: 3;
+    flex: 7;
   `};
 `;
 
@@ -71,16 +78,16 @@ const HeroTagline = styled.span`
   font-size: 1.75rem;
 `;
 
-function Hero({ sectionHeading }) {
+function Hero({ content }) {
   return (
     <HeroSection>
       <HeroSectionWrapper>
         <HeroImageWrapper>
-          <HeroImage src="http://mkendallcreative.com/img/vectorTree1.png" />
+          <HeroImage fluid={content[0].image.fluid} />
         </HeroImageWrapper>
         <HeroContent>
-          <HeroTitle>MKendall Creative</HeroTitle>
-          <HeroTagline>Web &amp; Creative Technologies</HeroTagline>
+          <HeroTitle>{content[0].title}</HeroTitle>
+          <HeroTagline>{content[0].tagline}</HeroTagline>
         </HeroContent>
       </HeroSectionWrapper>
     </HeroSection>
